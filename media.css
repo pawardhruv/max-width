@@ -1,0 +1,133 @@
+/* MEDIA QUERIES */
+
+/*  Small devices (Mobile first) */
+@media (max-width: 576px) {
+    /* Top bar */
+    .top-bar-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    /* Navigation */
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        display: none; 
+    }
+    .header-icons {
+        margin-top: 10px;
+    }
+
+    /* Hero banner */
+    .hero-banner .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .banner-image img {
+        max-width: 100%;
+    }
+
+    /* Featured categories */
+    .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    /* Products */
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/*  Medium devices (for both large & small) (Tablets) */
+@media (min-width: 577px) and (max-width: 991px) {
+    /* Navigation */
+    .nav-links {
+        flex-wrap: wrap;
+    }
+
+    /* Hero banner */
+    .hero-banner .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Categories */
+    .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    /* Products */
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*  Large devices (Desktops)  */
+@media (min-width: 992px) {
+    .nav-links {
+        display: flex !important;
+    }
+    .hero-banner .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .categories-grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 25px;
+    }
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+    .footer-grid {
+        grid-template-columns: repeat(6, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Responsive styles */
+@media(max-width){
+    nav{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #28a745;
+        width: 200px;
+    }
+
+    nav ul{
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /*show hamburger icon*/
+    .menu-icon{
+        display: block;
+    }
+
+    #menu-toggle:checked + .menu-icon + nav {
+        display: block;
+    }
+}
